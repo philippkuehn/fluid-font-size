@@ -1,6 +1,6 @@
 {
   "name": "fluid-font-size",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This Sass mixin doesn't create just viewport-based font-sizes. The ratio between small font-sizes and large font-sizes is smaller at a smaller window width.",
   "main": "fluid-font-size.scss",
   "scripts": {
