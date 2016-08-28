@@ -1,0 +1,33 @@
+{
+  "name": "fluid-font-size",
+  "version": "1.0.0",
+  "description": "This Sass mixin doesn't create just viewport-based font-sizes. The ratio between small font-sizes and large font-sizes is smaller at a smaller window width.",
+  "main": "fluid-font-size.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://philippkuehn@github.com/philippkuehn/fluid-font-size.git"
+  },
+  "keywords": [
+    "font",
+    "sizes",
+    "sass",
+    "scss",
+    "viewport-unit",
+    "vw",
+    "font-size",
+    "fluid",
+    "minimum",
+    "maximum",
+    "min-size",
+    "max-size"
+  ],
+  "author": "Philipp Kühn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philippkuehn/fluid-font-size/issues"
+  },
+  "homepage": "https://github.com/philippkuehn/fluid-font-size#readme"
+}
