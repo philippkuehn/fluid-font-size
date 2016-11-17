@@ -1,4 +1,4 @@
-// Fluid Font Size v1.0.1
+// Fluid Font Size v1.1.0
 // https://github.com/philippkuehn/fluid-font-size
 
 $fluid-font-size-ratio: 1 !default;
@@ -32,16 +32,21 @@ $fluid-font-size-ratio: 1 !default;
 }
 
 @mixin fluid-font-size($size, $options: ()) {
+	$important: false;
+	@if map-has-key($options, 'important') {
+		$important: map-get($options, 'important')
+	}
+
 	$magic-size: magic-size($size);
-	font-size: $size;
-	font-size: $magic-size;
+	font-size: $size if($important, !important, null);
+	font-size: $magic-size if($important, !important, null);
 	content: 'viewport-units-buggyfill; font-size: #{$magic-size}';
 
 	@if map-has-key($options, 'min') {
 		$min-size: map-get($options, 'min');
 		$min-vw: magic-size-viewport($size, $min-size);
 		@media (max-width: $min-vw) {
-			font-size: calc(#{$min-size});
+			font-size: #{$min-size} if($important, !important, null);
 		}
 	}
 
@@ -49,7 +54,7 @@ $fluid-font-size-ratio: 1 !default;
 		$max-size: map-get($options, 'max');
 		$max-vw: magic-size-viewport($size, $max-size);
 		@media (min-width: $max-vw) {
-			font-size: calc(#{$max-size});
+			font-size: #{$max-size} if($important, !important, null);
 		}
 	}
 }
